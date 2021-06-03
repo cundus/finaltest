@@ -1,0 +1,24 @@
+task 2 
+
+	dik:	voucher DumbWaysJos: potongan 21,1%, minimal uang belanja 50.000, dan maksimal diskon adalah 20.000
+		voucher DumbWaysmantap: potongan 30% , minimal uang belanja 80.000, maksimal diskon adalah 40.000
+		
+		contoh input  : hitungVoucher(voucher A, 100000)	
+		contoh output : uang yang harus dibayarkan : 80000
+				discount  : 20000
+				kembalian : 20000
+
+	
+	maka : 
+	yang harus ditentukan dalam function masing2 voucher adalah : 
+		1. variable untuk input uang total
+		2. variable potongan %
+		3. minimal uang belanja 
+		4. max discount
+	logicnya : 
+
+
+
+	
+	yang harus ditentukan dalam function calculatorVoucher adalah :
+		1. variable input uang total

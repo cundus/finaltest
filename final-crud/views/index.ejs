@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <%- include('./component/bootstrap.ejs') %>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="d-flex justify-content-end">
+        <a href="/add" class="btn btn-warning">Add Heroes</a> -
+        <a href="/type/add" class="btn btn-warning">Add Type</a>
+      </div>
+      <div class="card_container mt-4">
+        <% data.map((item) => { %>
+
+        <div class="card" style="width: 18rem">
+          <img
+            src="<%= item.photo %>"
+            class="card-img-top"
+            alt="<%= item.photo %>"
+          />
+          <div class="card-body">
+            <h2 class="card-title"><%= item.name %></h2>
+            <h6><%= item.typeId %></h6>
+            <a
+              href="/delete/<%= heroId %>"
+              onclick="return confirm('Apakah kamu mau hapus data ini')"
+              >Delete</a
+            >
+            <span> </span> <a href="">Edit</a>
+            <a href="#" class="btn btn-primary btn-sm">Detail</a>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>
